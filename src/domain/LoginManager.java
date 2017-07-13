@@ -26,6 +26,7 @@ public class LoginManager
 		this.password = password;
 	}
 	
+
 	/**
 	 * Attempts to make a connection to the database with user inputed credentials
 	 * 
@@ -33,10 +34,10 @@ public class LoginManager
 	 * @param password
 	 * @throws SQLServerException 
 	 */
-	private boolean login(String username, String password) throws SQLServerException
+	public boolean login() throws SQLServerException
 	{
-		server.ds.setUser(username);
-		server.ds.setPassword(password);
+		server.ds.setUser(this.username);
+		server.ds.setPassword(this.password);
 		if(server.authenticate() == true)
 		{
 			return true;
