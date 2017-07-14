@@ -43,14 +43,14 @@ public class LoginController
 		String user = username.getText();
 		String pass = password.getText();
 		manager = new LoginManager(user, pass);
-		
-		if(manager.login() == true)
-		{
-			resultText.setText("Successful Login");
-		}
-		else
-		{
+		try{
+			if(manager.login() == true)
+			{
+				resultText.setText("Successful Login");
+			}
+		}catch(Exception e){
 			resultText.setText("Failed Login");
+		
 		}
 	}
 	
