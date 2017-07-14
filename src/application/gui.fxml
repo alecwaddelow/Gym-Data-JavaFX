@@ -31,12 +31,12 @@
    <left>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField id="usernameField" fx:id="username" />
-            <Label text="Username" />
+                 <Label text="Username" />
+                 <TextField id="usernameField" fx:id="username" />
+                 <Label text="Password" />            
             <PasswordField id="passwordField" fx:id="password" prefHeight="25.0" prefWidth="142.0" />
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label text="Password" />
                   <HBox prefHeight="100.0" prefWidth="200.0" />
                </children>
             </VBox>
@@ -51,7 +51,6 @@
                   <Insets top="42.0" />
                </VBox.margin>
             </Button>
-            <Label fx:id="resultText" prefHeight="17.0" prefWidth="213.0" />
          </children>
       </VBox>
    </center>
