@@ -67,7 +67,7 @@ public class LoginController
 	
 	public ArrayList<TripViewModel> getEntries() throws SQLServerException, SQLException
 	{
-		return this.convertToViewModels(logic.getAllEntries());
+		return this.convertToViewModels(logic.getAllRows());
 	}
 	
 	public ArrayList<TripViewModel> convertToViewModels(ArrayList<TripDTO> entries){
