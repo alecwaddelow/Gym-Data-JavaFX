@@ -35,9 +35,9 @@
                  <TextField id="usernameField" fx:id="username" />
                  <Label text="Password" />            
             <PasswordField id="passwordField" fx:id="password" prefHeight="25.0" prefWidth="142.0" />
-            <VBox prefHeight="200.0" prefWidth="100.0">
+            <VBox prefHeight="173.0" prefWidth="100.0" spacing="50.0">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <TextField fx:id="resultText" />
                </children>
             </VBox>
          </children>

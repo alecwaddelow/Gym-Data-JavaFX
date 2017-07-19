@@ -2,9 +2,7 @@ package application;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-
 import com.microsoft.sqlserver.jdbc.SQLServerException;
-
 import Model.TripViewModel;
 import domain.GymBL;
 import domain.LoginManager;
@@ -12,7 +10,6 @@ import domain.TripDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -24,22 +21,18 @@ import javafx.scene.control.TextField;
  */
 public class LoginController 
 {
-	@FXML
-	private TextField username;
-	
-	@FXML
-	private PasswordField password;
-	
-	@FXML
-	private Button submitCredentials;
-	
 	private LoginManager manager;
+	private GymBL logic;
 
 	@FXML
-	private Label resultText;
-	
-	private GymBL logic;
-	
+	private TextField username;
+	@FXML
+	private PasswordField password;
+	@FXML
+	private Button submitCredentials;
+	@FXML
+	private TextField resultText;
+
 	/**
 	 * Attempts to log in 
 	 * 
@@ -56,22 +49,22 @@ public class LoginController
 			if(manager.login() == true)
 			{
 				resultText.setText("Successful Login");
-				ArrayList<TripViewModel> viewModels = new ArrayList<TripViewModel>();
-				this.getEntries();
+				//				ArrayList<TripViewModel> viewModels = new ArrayList<TripViewModel>();
+				//				this.getEntries();
 			}
 		}catch(Exception e){
 			resultText.setText("Failed Login");
-		
+
 		}
 	}
-	
+
 	public ArrayList<TripViewModel> getEntries() throws SQLServerException, SQLException
 	{
 		return this.convertToViewModels(logic.getAllRows());
 	}
-	
+
 	public ArrayList<TripViewModel> convertToViewModels(ArrayList<TripDTO> entries){
 		return null;
 	}
-	
+
 }
