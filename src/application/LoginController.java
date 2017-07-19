@@ -1,12 +1,7 @@
 package application;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
-import Model.TripViewModel;
-import domain.GymBL;
 import domain.LoginManager;
-import domain.TripDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,16 +20,10 @@ import javafx.stage.Stage;
 public class LoginController 
 {
 	private LoginManager manager;
-	private GymBL logic;
-
-	@FXML
-	private TextField username;
-	@FXML
-	private PasswordField password;
-	@FXML
-	private Button submitCredentials;
-	@FXML
-	private TextField resultText;
+	@FXML private TextField username;
+	@FXML private PasswordField password;
+	@FXML private Button submitCredentials;
+	@FXML private TextField resultText;
 
 	/**
 	 * Attempts to log in 
@@ -61,6 +50,7 @@ public class LoginController
 					stage.setTitle("Entries in Database");
 					stage.setScene(scene);
 					stage.show();
+
 				}
 				catch(Exception e)
 				{
