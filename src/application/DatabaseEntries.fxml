@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane prefHeight="600.0" prefWidth="1000.0" AnchorPane.rightAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="598.0">
+               <children>
+                  <TableView prefHeight="600.0" prefWidth="1000.0">
+                    <columns>
+                      <TableColumn minWidth="100.0" prefWidth="80.0" text="Date" />
+                      <TableColumn minWidth="100.0" prefWidth="117.0" text="Length of Trip" />
+                      <TableColumn minWidth="100.0" prefWidth="114.0" text="Length of Cardio" />
+                      <TableColumn minWidth="100.0" prefWidth="89.0" text="Length of Lift" />
+                      <TableColumn minWidth="100.0" prefWidth="100.0" text="Time in Sauna" />
+                      <TableColumn minWidth="100.0" prefWidth="80.0" text="Weight" />
+                      <TableColumn minWidth="100.0" prefWidth="80.0" text="Comment" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

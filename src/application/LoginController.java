@@ -9,9 +9,12 @@ import domain.LoginManager;
 import domain.TripDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * Controller for logging in 
@@ -49,6 +52,20 @@ public class LoginController
 			if(manager.login() == true)
 			{
 				resultText.setText("Successful Login");
+				try {
+					FXMLLoader loader = new FXMLLoader();
+					loader.setLocation(getClass().getResource("DatabaseEntries.fxml"));
+					
+					Scene scene = new Scene(loader.load(), 1000, 600);
+					Stage stage = new Stage();
+					stage.setTitle("Entries in Database");
+					stage.setScene(scene);
+					stage.show();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				//				ArrayList<TripViewModel> viewModels = new ArrayList<TripViewModel>();
 				//				this.getEntries();
 			}
@@ -56,15 +73,6 @@ public class LoginController
 			resultText.setText("Failed Login");
 
 		}
-	}
-
-	public ArrayList<TripViewModel> getEntries() throws SQLServerException, SQLException
-	{
-		return this.convertToViewModels(logic.getAllRows());
-	}
-
-	public ArrayList<TripViewModel> convertToViewModels(ArrayList<TripDTO> entries){
-		return null;
 	}
 
 }
