@@ -105,7 +105,7 @@ public class EntriesController implements Initializable
 		return this.entries;
 	}
 	/**
-	 * Converts from DTO's to TripViewModels
+	 * Converts  DTO's to TripViewModels
 	 * 
 	 * @param ArrayList<TripDTO> dtoList
 	 */

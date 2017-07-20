@@ -8,11 +8,11 @@
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="973.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EntriesController">
    <children>
-      <ScrollPane layoutY="-9.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1113.0" AnchorPane.rightAnchor="-113.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="-9.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="1400.0" AnchorPane.rightAnchor="-113.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="598.0">
                <children>
-                  <TableView fx:id="tableView" prefHeight="600.0" prefWidth="1000.0" AnchorPane.leftAnchor="275.0">
+                  <TableView fx:id="tableView" prefHeight="600.0" prefWidth="1000.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="-1200.0">
                     <columns>
                       <TableColumn fx:id="date" minWidth="100.0" prefWidth="80.0" text="Date" />
                       <TableColumn fx:id="lengthOfTrip" minWidth="100.0" prefWidth="117.0" text="Length of Trip" />
