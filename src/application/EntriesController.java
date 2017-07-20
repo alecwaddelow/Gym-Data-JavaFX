@@ -4,7 +4,6 @@ import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import Model.TripViewModel;
@@ -28,7 +27,7 @@ public class EntriesController implements Initializable
 	protected ObservableList<TripViewModel> entries = FXCollections.observableArrayList();
 	
 	@FXML private TableView<TripViewModel> tableView = new TableView<>();
-	@FXML private TableColumn<TripViewModel, Date> date = new TableColumn<>();
+	@FXML private TableColumn<TripViewModel, Date> date = new TableColumn<TripViewModel, Date>();
 	@FXML private TableColumn<TripViewModel, Double> lengthOfTrip = new TableColumn<>();
 	@FXML private TableColumn<TripViewModel, Double> lengthOfCardio = new TableColumn<>();
 	@FXML private TableColumn<TripViewModel, Double> lengthOfLifting = new TableColumn<>();

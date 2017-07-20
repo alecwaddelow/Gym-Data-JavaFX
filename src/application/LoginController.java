@@ -50,19 +50,14 @@ public class LoginController
 					stage.setTitle("Entries in Database");
 					stage.setScene(scene);
 					stage.show();
-
 				}
 				catch(Exception e)
 				{
 					e.printStackTrace();
 				}
-				//				ArrayList<TripViewModel> viewModels = new ArrayList<TripViewModel>();
-				//				this.getEntries();
 			}
 		}catch(Exception e){
 			resultText.setText("Failed Login");
-
 		}
 	}
-
 }
