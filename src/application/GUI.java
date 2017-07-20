@@ -22,5 +22,6 @@ public class GUI extends Application {
 	        stage.setTitle("Please log in");
 	        stage.setScene(scene);
 	        stage.show();
+	        //test
 	}
 }
