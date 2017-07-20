@@ -11,10 +11,14 @@ import domain.TripDTO;
 import domain.TripManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
@@ -35,6 +39,15 @@ public class EntriesController implements Initializable
 	@FXML private TableColumn<TripViewModel, Double> lengthOfSauna = new TableColumn<>();
 	@FXML private TableColumn<TripViewModel, Integer> weight = new TableColumn<>();
 	@FXML private TableColumn<TripViewModel, String> comment = new TableColumn<>();
+	
+	@FXML private DatePicker dateInput;
+	@FXML private TextField lengthOfTripInput;
+	@FXML private TextField lengthOfCardioInput;
+	@FXML private TextField lengthOfLiftingInput;
+	@FXML private TextField lengthOfSaunaInput;
+	@FXML private TextField weightInput;
+	@FXML private TextField commentInput;
+	@FXML private Button submitButton;
 	
 	/**
 	 * Initialized the table
@@ -59,6 +72,23 @@ public class EntriesController implements Initializable
 			e.printStackTrace();
 		}
 		
+	}
+	
+	/**
+	 * On submit, add a new row to table
+	 * 
+	 * @param event
+	 * @throws NumberFormatException
+	 * @throws SQLException
+	 */
+	public void addTrip(ActionEvent event) throws NumberFormatException, SQLException
+	{
+		manager.enterNewTrip(Date.valueOf(dateInput.getValue()), Double.parseDouble(lengthOfTripInput.getText()),
+				Double.parseDouble(lengthOfCardioInput.getText()), Double.parseDouble(lengthOfLiftingInput.getText()),
+				Double.parseDouble(lengthOfSaunaInput.getText()), Integer.parseInt(weightInput.getText()), commentInput.getText());
+		entries.add(new TripViewModel(Date.valueOf(dateInput.getValue()), Double.parseDouble(lengthOfTripInput.getText()),
+				Double.parseDouble(lengthOfCardioInput.getText()), Double.parseDouble(lengthOfLiftingInput.getText()),
+				Double.parseDouble(lengthOfSaunaInput.getText()), Integer.parseInt(weightInput.getText()), commentInput.getText()));
 	}
 	
 	/**
