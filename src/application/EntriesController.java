@@ -36,7 +36,9 @@ public class EntriesController implements Initializable
 	@FXML private TableColumn<TripViewModel, Integer> weight = new TableColumn<>();
 	@FXML private TableColumn<TripViewModel, String> comment = new TableColumn<>();
 	
-	
+	/**
+	 * Initialized the table
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) 
 	{
@@ -59,7 +61,12 @@ public class EntriesController implements Initializable
 		
 	}
 	
-	
+	/**
+	 * 
+	 * @return entries in ObservableList form
+	 * @throws SQLServerException
+	 * @throws SQLException
+	 */
 	private ObservableList<TripViewModel> returnListOfTrips() throws SQLServerException, SQLException
 	{
 		ArrayList<TripDTO> rows = manager.getAllEntries();
