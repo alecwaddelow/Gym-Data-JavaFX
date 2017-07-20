@@ -26,9 +26,8 @@ public class LoginController
 	@FXML private TextField resultText;
 
 	/**
-	 * Attempts to log in 
-	 * 
-	 * @return true or false
+	 * Attempts to log in when submit credentials button is pressed
+	 * Then launches the database entries gui
 	 * @throws SQLServerException
 	 */
 	@FXML

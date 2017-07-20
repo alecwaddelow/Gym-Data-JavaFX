@@ -20,6 +20,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 /**
  * @author Alec Waddelow
  *
+ *	A controller to initialize the table of GymTrip entries and fill it with data from the Database 
  */
 public class EntriesController implements Initializable
 {
@@ -61,8 +62,9 @@ public class EntriesController implements Initializable
 	}
 	
 	/**
+	 * Gets the current list of entries from the database 
 	 * 
-	 * @return entries in ObservableList form
+	 * @return TripViewModels in ObservableList form
 	 * @throws SQLServerException
 	 * @throws SQLException
 	 */
@@ -75,7 +77,7 @@ public class EntriesController implements Initializable
 	/**
 	 * Converts from DTO's to TripViewModels
 	 * 
-	 * @param dtoList
+	 * @param ArrayList<TripDTO> dtoList
 	 */
 	private ObservableList<TripViewModel> convertToViewModel(ArrayList<TripDTO> dtoList)
 	{

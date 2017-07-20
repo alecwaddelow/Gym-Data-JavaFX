@@ -7,13 +7,28 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class GUI extends Application {
+/**
+ * 
+ * @author Alec Waddelow, Drew Rife, Marty Sease, and Chris Roadcap
+ *
+ * The main login screen launcher 
+ */
+public class GUI extends Application 
+{
 
-	public static void main(String[] args) {
+	/**
+	 * Launches the GUI and starts the program
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) 
+	{
 		launch(args);
 	}
 
-	
+	/**
+	 * Overridden start method to load the fxml document and set the scene
+	 */
 	@Override
 	public void start(Stage stage) throws IOException {
 		 	Parent root = FXMLLoader.load(getClass().getResource("loginScreen.fxml"));

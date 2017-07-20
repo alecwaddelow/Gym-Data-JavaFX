@@ -2,6 +2,13 @@ package Model;
 
 import java.util.Date;
 
+/**
+ * 
+ * @author Marty Sease and Alec Waddelow
+ * 
+ * A model for holding data that will be displayed in the User Interface
+ *
+ */
 public class TripViewModel 
 {
 	protected Date date; 
@@ -12,6 +19,17 @@ public class TripViewModel
 	protected int weight; 
 	protected String comment; 
 
+	/**
+	 * Standard constructor
+	 * 
+	 * @param date
+	 * @param lengthOfTrip
+	 * @param lengthOfCardio
+	 * @param lengthOfLifting
+	 * @param lengthOfSauna
+	 * @param weight
+	 * @param comment
+	 */
 	public TripViewModel(Date date, double lengthOfTrip, double lengthOfCardio, double lengthOfLifting, double lengthOfSauna, 
 			int weight, String comment)
 	{
