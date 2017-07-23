@@ -44,7 +44,7 @@ public class LoginController
 					FXMLLoader loader = new FXMLLoader();
 					loader.setLocation(getClass().getResource("DatabaseEntries.fxml"));
 					
-					Scene scene = new Scene(loader.load(), 1000, 600);
+					Scene scene = new Scene(loader.load(), 1500, 600);
 					Stage stage = new Stage();
 					stage.setTitle("Entries in Database");
 					stage.setScene(scene);
