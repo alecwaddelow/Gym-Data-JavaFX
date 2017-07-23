@@ -26,6 +26,18 @@ public class LoginController
 	@FXML private TextField resultText;
 
 	/**
+	 * Calls the login method when the enter key is pressed
+	 * Is binded to only the password field. 
+	 * No validation are required in this method because
+	 * they are all handled in logIn method.
+	 * @param ae
+	 * @throws SQLServerException
+	 */
+	@FXML
+	public void onEnter(ActionEvent ae) throws SQLServerException{
+		logIn(ae);
+	}
+	/**
 	 * Attempts to log in when submit credentials button is pressed
 	 * Then launches the database entries gui
 	 * @throws SQLServerException

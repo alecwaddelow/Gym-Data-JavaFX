@@ -34,7 +34,7 @@
                  <Label text="Username" />
                  <TextField id="usernameField" fx:id="username" />
                  <Label text="Password" />            
-            <PasswordField id="passwordField" fx:id="password" prefHeight="25.0" prefWidth="142.0" />
+            <PasswordField id="passwordField" fx:id="password" onAction="#onEnter" prefHeight="25.0" prefWidth="142.0" />
             <VBox prefHeight="173.0" prefWidth="100.0" spacing="50.0">
                <children>
                   <TextField fx:id="resultText" />
