@@ -4,6 +4,7 @@ import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import Model.TripViewModel;
@@ -127,11 +128,11 @@ public class EntriesController implements Initializable
 	 */
 	public void deleteTrip(ActionEvent event) throws SQLException
 	{
-		ObservableList<TripViewModel> tripSelected, allTrips;
-		allTrips = tableView.getItems();
+		ObservableList<TripViewModel> tripSelected;
 		tripSelected = tableView.getSelectionModel().getSelectedItems();
-		allTrips.forEach(tripSelected::remove);
 		Date date = (Date) tripSelected.get(0).getDate();
 		manager.deleteTrip(date);
+		entries.removeAll(entries);
+		entries = returnListOfTrips();
 	}
 }
