@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 /**
  * Controller for logging in 
  * 
- * @author Alec Waddelow
+ * @author Alec Waddelow & Marty Sease
  *
  */
 public class LoginController 
@@ -37,9 +37,10 @@ public class LoginController
 	public void onEnter(ActionEvent ae) throws SQLServerException{
 		logIn(ae);
 	}
+	
 	/**
 	 * Attempts to log in when submit credentials button is pressed
-	 * Then launches the database entries gui
+	 * Then launches the database entries GUI
 	 * @throws SQLServerException
 	 */
 	@FXML

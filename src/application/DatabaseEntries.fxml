@@ -22,6 +22,9 @@
                       <TableColumn fx:id="weight" minWidth="80.0" prefWidth="80.0" text="Weight" />
                       <TableColumn fx:id="comment" minWidth="94.0" prefWidth="94.0" text="Comment" />
                     </columns>
+                     <padding>
+                        <Insets top="2.0" />
+                     </padding>
                   </TableView>
                   <VBox layoutY="4.0" prefHeight="593.0" prefWidth="276.0">
                      <children>
@@ -46,7 +49,10 @@
                                     <Insets left="25.0" />
                                  </GridPane.margin>
                               </Label>
-                              <DatePicker fx:id="dateInput" GridPane.columnIndex="1" />
+                              <DatePicker fx:id="dateInput" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin></DatePicker>
                               <Label text="Length of Trip" GridPane.rowIndex="1">
                                  <padding>
                                     <Insets left="25.0" />
@@ -77,12 +83,30 @@
                                     <Insets left="25.0" />
                                  </padding>
                               </Label>
-                              <TextField fx:id="lengthOfTripInput" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField fx:id="lengthOfCardioInput" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField fx:id="lengthOfLiftingInput" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField fx:id="lengthOfSaunaInput" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField fx:id="weightInput" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <TextField fx:id="commentInput" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField fx:id="lengthOfTripInput" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin></TextField>
+                              <TextField fx:id="lengthOfCardioInput" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin></TextField>
+                              <TextField fx:id="lengthOfLiftingInput" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin></TextField>
+                              <TextField fx:id="lengthOfSaunaInput" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin></TextField>
+                              <TextField fx:id="weightInput" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin></TextField>
+                              <TextField fx:id="commentInput" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin></TextField>
                               <Button fx:id="submitButton" mnemonicParsing="false" onAction="#addTrip" text="Submit " GridPane.rowIndex="7">
                                  <GridPane.margin>
                                     <Insets left="25.0" />
@@ -90,6 +114,15 @@
                               </Button>
                            </children>
                         </GridPane>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_RIGHT" layoutX="1107.0" layoutY="-6.0" prefHeight="600.0" prefWidth="286.0">
+                     <children>
+                        <Button fx:id="deleteButton" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#deleteTrip" text="Delete">
+                           <VBox.margin>
+                              <Insets bottom="400.0" right="150.0" />
+                           </VBox.margin>
+                        </Button>
                      </children>
                   </VBox>
                </children>

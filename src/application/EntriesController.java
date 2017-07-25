@@ -48,6 +48,7 @@ public class EntriesController implements Initializable
 	@FXML private TextField weightInput;
 	@FXML private TextField commentInput;
 	@FXML private Button submitButton;
+	@FXML private Button deleteButton;
 	
 	/**
 	 * Initialized the table
@@ -63,7 +64,6 @@ public class EntriesController implements Initializable
 		weight.setCellValueFactory(new PropertyValueFactory<>("weight"));
 		comment.setCellValueFactory(new PropertyValueFactory<>("comment"));
 		
-		
 		try {
 			tableView.setItems(returnListOfTrips());
 		} catch (SQLServerException e) {
@@ -71,7 +71,6 @@ public class EntriesController implements Initializable
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
 	/**
@@ -86,6 +85,7 @@ public class EntriesController implements Initializable
 		manager.enterNewTrip(Date.valueOf(dateInput.getValue()), Double.parseDouble(lengthOfTripInput.getText()),
 				Double.parseDouble(lengthOfCardioInput.getText()), Double.parseDouble(lengthOfLiftingInput.getText()),
 				Double.parseDouble(lengthOfSaunaInput.getText()), Integer.parseInt(weightInput.getText()), commentInput.getText());
+		
 		entries.add(new TripViewModel(Date.valueOf(dateInput.getValue()), Double.parseDouble(lengthOfTripInput.getText()),
 				Double.parseDouble(lengthOfCardioInput.getText()), Double.parseDouble(lengthOfLiftingInput.getText()),
 				Double.parseDouble(lengthOfSaunaInput.getText()), Integer.parseInt(weightInput.getText()), commentInput.getText()));
@@ -104,6 +104,7 @@ public class EntriesController implements Initializable
 		this.entries = convertToViewModel(rows);
 		return this.entries;
 	}
+	
 	/**
 	 * Converts  DTO's to TripViewModels
 	 * 
@@ -116,5 +117,21 @@ public class EntriesController implements Initializable
 			entries.add(new TripViewModel(row.getDate(), row.getLengthOfTrip(), row.getLengthOfCardio(), row.getLengthOfLifting(), row.getLengthOfSauna(), row.getWeight(), row.getComment()));
 		}
 		return this.entries;
+	}
+	
+	/**
+	 * Deletes a selected row from database
+	 * 
+	 * @param event
+	 * @throws SQLException
+	 */
+	public void deleteTrip(ActionEvent event) throws SQLException
+	{
+		ObservableList<TripViewModel> tripSelected, allTrips;
+		allTrips = tableView.getItems();
+		tripSelected = tableView.getSelectionModel().getSelectedItems();
+		allTrips.forEach(tripSelected::remove);
+		Date date = (Date) tripSelected.get(0).getDate();
+		manager.deleteTrip(date);
 	}
 }
