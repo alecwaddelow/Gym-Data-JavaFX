@@ -30,6 +30,7 @@ public class LoginController
 	 * Is binded to only the password field. 
 	 * No validation are required in this method because
 	 * they are all handled in logIn method.
+	 * 
 	 * @param ae
 	 * @throws SQLServerException
 	 */
@@ -41,6 +42,7 @@ public class LoginController
 	/**
 	 * Attempts to log in when submit credentials button is pressed
 	 * Then launches the database entries GUI
+	 * 
 	 * @throws SQLServerException
 	 */
 	@FXML
@@ -55,11 +57,11 @@ public class LoginController
 				resultText.setText("Successful Login");
 				try {
 					FXMLLoader loader = new FXMLLoader();
-					loader.setLocation(getClass().getResource("DatabaseEntries.fxml"));
+					loader.setLocation(getClass().getResource("HomeScreen.fxml"));
 					
-					Scene scene = new Scene(loader.load(), 1280, 600);
+					Scene scene = new Scene(loader.load(), 600, 600);
 					Stage stage = new Stage();
-					stage.setTitle("Entries in Database");
+					stage.setTitle("Home Menu");
 					stage.setScene(scene);
 					stage.show();
 				}
