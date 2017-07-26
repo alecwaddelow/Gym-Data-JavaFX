@@ -51,7 +51,20 @@ public class HomeScreenController
 	@FXML
 	public void openAnalyticsScreen(ActionEvent event)
 	{
-		
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(getClass().getResource("AnalyticsScreen.fxml"));
+			
+			Scene scene = new Scene(loader.load(), 800, 800);
+			Stage stage = new Stage();
+			stage.setTitle("Analytics");
+			stage.setScene(scene);
+			stage.show();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	/**
