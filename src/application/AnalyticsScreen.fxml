@@ -75,6 +75,7 @@
                   <TextField fx:id="longestTripField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <TextField fx:id="averageCardioLengthField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                   <TextField fx:id="longestSaunaField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Button fx:id="loadChartButton" mnemonicParsing="false" onAction="#loadChart" text="Weight History Chart" />
                </children>
             </GridPane>
          </content>

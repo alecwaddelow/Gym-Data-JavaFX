@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WeightChartController">
+   <children>
+      <LineChart fx:id="weightChart" layoutX="50.0" layoutY="25.0" prefHeight="457.0" prefWidth="500.0" title="Weight History">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" fx:id="yAxis" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>
