@@ -48,11 +48,11 @@ public class AnalyticsController implements Initializable
 	{
 		maxWeightField.setText(maxWeight);
 		minWeightField.setText(minWeight);
-		averageWeightField.setText(averageWeight);
-		averageLengthOfTripField.setText(averageLengthOfTrip);
+		averageWeightField.setText(String.format("%.6s", averageWeight));
+		averageLengthOfTripField.setText(String.format("%.4s" ,averageLengthOfTrip));
 		shortestTripField.setText(shortestTrip);
 		longestTripField.setText(longestTrip);
-		averageCardioLengthField.setText(averageCardioLength);
+		averageCardioLengthField.setText(String.format("%.2s", averageCardioLength));
 		longestSaunaField.setText(longestSauna);
 	}
 	
