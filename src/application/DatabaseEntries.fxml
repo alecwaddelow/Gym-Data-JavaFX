@@ -112,19 +112,12 @@
                                     <Insets left="25.0" />
                                  </GridPane.margin>
                               </Button>
+                              <Button fx:id="deleteButton" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#deleteTrip" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                            </children>
                         </GridPane>
                      </children>
                   </VBox>
-                  <VBox alignment="BOTTOM_RIGHT" layoutX="1107.0" layoutY="-6.0" prefHeight="600.0" prefWidth="286.0">
-                     <children>
-                        <Button fx:id="deleteButton" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#deleteTrip" text="Delete">
-                           <VBox.margin>
-                              <Insets bottom="400.0" right="150.0" />
-                           </VBox.margin>
-                        </Button>
-                     </children>
-                  </VBox>
+                  <VBox alignment="BOTTOM_RIGHT" layoutX="1107.0" layoutY="-6.0" prefHeight="600.0" prefWidth="286.0" />
                </children>
             </AnchorPane>
         </content>
