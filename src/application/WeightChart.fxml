@@ -7,12 +7,12 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WeightChartController">
    <children>
-      <LineChart fx:id="weightChart" layoutX="50.0" layoutY="25.0" prefHeight="457.0" prefWidth="500.0" title="Weight History">
+      <LineChart fx:id="weightChart" layoutX="-12.0" layoutY="6.0" prefHeight="593.0" prefWidth="608.0" title="Weight History">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
         <yAxis>
-          <NumberAxis side="LEFT" fx:id="yAxis" />
+          <NumberAxis fx:id="yAxis" side="LEFT" />
         </yAxis>
       </LineChart>
    </children>
